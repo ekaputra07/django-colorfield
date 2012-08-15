@@ -7,7 +7,6 @@ VERSION = '0.1.0'
 setup(
     name = "django-colorfield",
     version = VERSION,
-    version = "0.1.0",
     url = 'https://github.com/ekaputra07/django-colorfield',
 	download_url = 'https://github.com/ekaputra07/django-colorfield/downloads',
     description = "A small app providing a colorpicker field for django.",
