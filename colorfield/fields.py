@@ -17,6 +17,11 @@ class ColorWidget(forms.Widget):
     def render(self, name, value, attrs=None):
         return render_to_string('colorfield/color.html', locals())
         
+class ColorFormField(forms.CharField):
+    def __init__(self, *args, **kwargs):
+        kwargs['widget'] = ColorWidget
+        super(ColorFormField, self).__init__(*args, **kwargs)        
+        
 class ColorField(models.CharField):
     default_validators = [validate_color]
 
